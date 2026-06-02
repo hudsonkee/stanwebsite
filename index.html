@@ -1,1 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scrollable Foreground Website</title>
+    <style>
+        /* Reset default margins and padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
+        body, html {
+            height: 100%;
+            font-family: Arial, sans-serif;
+        }
+
+        /* 1. Still Background Image */
+        .background-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            /* Points to background.jpg in your repository folder */
+            background-image: url('background.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            z-index: -1; /* Pushes it behind everything else */
+        }
+
+        /* 2. Scrollable Foreground Wrapper */
+        .foreground-scroller {
+            position: relative;
+            width: 100%;
+            min-height: 100vh;
+            z-index: 1;
+            /* Space at top/bottom so you can see the background before scrolling */
+            padding: 10vh 0; 
+        }
+
+        /* 3. Responsive Foreground Image */
+        .foreground-image {
+            width: 100%;
+            height: auto; /* Maintains aspect ratio */
+            display: block; /* Removes unwanted bottom whitespace */
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Separates it visually from background */
+        }
+
+        /* Content container to keep everything centered */
+        .content-container {
+            width: 100%;
+            max-width: 100%; 
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="background-container"></div>
+
+    <div class="foreground-scroller">
+        <div class="content-container">
+            <img src="foreground.png" alt="Foreground Content" class="foreground-image">
+        </div>
+    </div>
+
+</body>
+</html>
