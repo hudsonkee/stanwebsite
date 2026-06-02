@@ -16,6 +16,8 @@
             height: 100%;
             font-family: Arial, sans-serif;
             overscroll-behaviour: non;
+            scroll-anchor-behavior: none; 
+            scroll-anchoring: none;
         }
 
         /* 1. Still Background Image */
@@ -45,7 +47,8 @@
 
         /* 3. Responsive Foreground Image */
         .foreground-image {
-            width: 50vw;
+            width: 50rem;
+            max-width: 90%;
             height: auto; /* Maintains aspect ratio */
             display: block; /* Removes unwanted bottom whitespace */
         }
