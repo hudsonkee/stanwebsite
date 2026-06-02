@@ -36,7 +36,7 @@
         /* 2. Scrollable Foreground Wrapper */
         .foreground-scroller {
             position: relative;
-            width: 50%;
+            width: 100%;
             min-height: 100vh;
             z-index: 1;
             /* Space at top/bottom so you can see the background before scrolling */
@@ -45,7 +45,7 @@
 
         /* 3. Responsive Foreground Image */
         .foreground-image {
-            width: 100%;
+            width: 50%;
             height: auto; /* Maintains aspect ratio */
             display: block; /* Removes unwanted bottom whitespace */
         }
@@ -55,6 +55,8 @@
             width: 100%;
             max-width: 100%; 
             margin: 0 auto;
+            display: flex;
+            justify-content: center;
         }
     </style>
 </head>
